@@ -4,7 +4,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -15,11 +15,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.sky {
+  background-color: #b10f0f;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -27,7 +39,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  flex-direction: column; /* Changed to column for better layout */
+  align-items: center; /* Center items */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -50,9 +63,11 @@ h1 {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vanilla:hover {
   filter: drop-shadow(0 0 2em #f7df1eaa);
 }
@@ -76,9 +91,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -97,7 +114,7 @@ button:focus-visible {
   }
 }
 
-body{
+body {
   font-family: sans-serif;
 }
 
@@ -107,62 +124,102 @@ body{
   box-sizing: border-box;
 }
 
-header{
+header {
   width: 100%;
   min-height: 100vh;
   background-color: #000;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Changed to flex for better responsiveness */
+  flex-direction: column;
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
 }
 
-.canvas-container{
+.canvas-container {
   overflow: hidden;
 }
 
-.text{
+.text {
   color: #fff;
   padding: 2em;
+  text-align: center; /* Center text */
 }
 
-.text h1{
+.text h1 {
   font-size: 2.5em;
-  font-family: 'Kanit' , sans-serif;
+  font-family: 'Kanit', sans-serif;
   line-height: 50px;
 }
 
-.text p{
+.text p {
   color: #afafaf;
   max-width: 400px;
-  margin: 1em 0;
+  margin: 1em auto; /* Center paragraphs */
   line-height: 27px;
 }
 
-.text{
+.text {
   position: relative;
-  left: 1200px;
-  bottom: 600px;
+  padding: 1em; /* Removed absolute positioning */
 }
 
-@media screen and (max-width: 800px){
-  header{
-    grid-template-columns: 1fr;
-    order: 1;
+@media screen and (max-width: 800px) {
+  header {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
   }
-  .app{
+  .app {
     order: 2;
   }
-  .text p{
+  .text p {
     margin: 1em auto;
   }
 }
 
-@media screen and (min-width:1000px){
-  .text h1{
+@media screen and (min-width: 1000px) {
+  .text h1 {
     font-size: 3.4em;
   }
-  .text p{
+  .text p {
     font-size: 1.1em;
   }
 }
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center; /* Center the flex items horizontally */
+  align-items: center; /* Center the flex items vertically */
+}
+
+.app {
+  display: flex; /* Enable flexbox layout */
+  align-items: center; /* Align items vertically centered */
+}
+
+canvas {
+  width: 50%; /* Set canvas width to occupy half of the space */
+  max-width: 600px; /* Optional: set a max-width */
+}
+
+.text {
+  color: #fff;
+  padding: 2em;
+  text-align: left; /* Align text to the left */
+  margin-left: 2em; /* Add space between canvas and text */
+}
+
+.text h1 {
+  font-size: 2.5em;
+  font-family: 'Kanit', sans-serif;
+  line-height: 50px;
+}
+
+.text p {
+  color: #afafaf;
+  max-width: 400px;
+  margin: 1em 0; /* Center paragraphs */
+  line-height: 27px;
+}
+
