@@ -15,8 +15,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.shootingstars {
+  display: block;
+  position: fixed;
+  width: 150vh;
+  height: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%)) rotate(120deg);
+          transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%)) rotate(120deg);
+}
+
 .sky {
-  background-color: #b10f0f;
+  background-color: #000000;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -87,7 +100,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #000000;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -127,7 +140,7 @@ body {
 header {
   width: 100%;
   min-height: 100vh;
-  background-color: #000;
+  background-color: #000000;
   display: flex; /* Changed to flex for better responsiveness */
   flex-direction: column;
   justify-content: center; /* Center items vertically */
@@ -191,6 +204,18 @@ header {
   display: flex;
   justify-content: center; /* Center the flex items horizontally */
   align-items: center; /* Center the flex items vertically */
+}
+.shootingstars {
+  display: block;
+  position: fixed;
+  width: 150vh;
+  height: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%)) rotate(120deg);
+          transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%)) rotate(120deg);
 }
 
 .app {

@@ -2,34 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,  initial-scale=1.0" />
-    <!--Google Font-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com"
-    crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
-<!--CSS-->
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>3D model landing page</title>
+    <link rel="stylesheet" href="moonPhaseDetector.css"> 
+    <title>3D Model Landing Page</title>
   </head>
   <body>
     <div class="sky">
-      <svg class='background' version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="1532" height="1291"><g fill="#FFF" fill-rule="evenodd" opacity=".202"></g></svg>
+      <svg class='background' version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg" width="1532" height="1291">
+        <g fill="#FFF" fill-rule="evenodd" opacity=".202"></g>
+      </svg>
     </div>
-    <!--HTML goes here-->
-    <!--Javascript-->
+  
     <script type="module" src="/main.js"></script>
 
     <header>
+      <div class="shootingstars"></div>
       <div class="app">
         <canvas id="webg1"></canvas>
         <div class="text">
-          <h1>Myteries of <br>the Moon</h1>
+          <h1>Mysteries of <br>the Moon</h1>
           <p>
-            Join us on an extraordinary journey to discover the secrets and wonders of Earth's celestial companion
+            Join us on an extraordinary journey to discover the secrets and wonders of Earth's celestial companion.
           </p>
         </div>
       </div>
     </header>
+    
+    <!-- Moon Phase Detector Section -->
+    <div class="app">
+      <section id="moon-phase-detector">
+        <h2>Moon Phase Detector</h2>
+        <div>
+          <label for="date">Enter a Date:</label>
+          <input type="date" id="date">
+          <button onclick="detectMoonPhase()">Check Moon Phase</button>
+        </div>
+        
+        <div class="moon-phase">
+          <p id="phaseText"></p>
+          <img id="moonImage" src="" alt="Moon phase">
+        </div>
+      </section>
+      
+      <script src="moonPhaseDetector.js"></script>
+    </div>
   </body>
 </html>
